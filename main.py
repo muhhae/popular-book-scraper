@@ -188,6 +188,7 @@ for href in href_list:
         session.commit()
         print("Added new book", new_book)
     except Exception as e:
+        session.rollback()
         print("Error connecting to the database:", e)
 
 session.close()
