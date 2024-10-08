@@ -22,7 +22,7 @@ options.add_argument("--headless")
 
 driver = webdriver.Firefox(options=options)
 
-url = "https://www.goodreads.com/book/popular_by_date/2024/1"
+url = os.getenv("URL")
 driver.get(url)
 
 href_list = []
