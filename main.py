@@ -159,6 +159,7 @@ def load_all():
             return
 
 
+print("BEGIN SCRAPING", url)
 load_all()
 scrape_url()
 
