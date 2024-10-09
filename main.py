@@ -184,7 +184,7 @@ except Exception as e:
 for href in href_list:
     try:
         session = Session()
-        existing_book = session.query(model.Book).filter_by(url=href).first()
+        existing_book = session.query(model.book).filter_by(url=href).first()
         if existing_book:
             print(f"Book with URL {href} already exists.")
         else:
