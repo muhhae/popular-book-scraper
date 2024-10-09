@@ -11,12 +11,12 @@ services:
       - .env
     environment:
       - URL=https://www.goodreads.com/book/popular_by_date/2023/2
-  # app2:
-  #   build: .
-  #   env_file:
-  #     - .env
-  #   environment:
-  #     - URL=https://www.goodreads.com/book/popular_by_date/2023/3
+  app2:
+    build: .
+    env_file:
+      - .env
+    environment:
+      - URL=https://www.goodreads.com/book/popular_by_date/2023/3
   # app3:
   #   build: .
   #   env_file:
