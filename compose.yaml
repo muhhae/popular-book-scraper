@@ -35,39 +35,39 @@ services:
       - .env
     environment:
       - URL=https://www.goodreads.com/book/popular_by_date/2023/6
-  app6:
-    build: .
-    env_file:
-      - .env
-    environment:
-      - URL=https://www.goodreads.com/book/popular_by_date/2023/7
-  app7:
-    build: .
-    env_file:
-      - .env
-    environment:
-      - URL=https://www.goodreads.com/book/popular_by_date/2023/8
-  app8:
-    build: .
-    env_file:
-      - .env
-    environment:
-      - URL=https://www.goodreads.com/book/popular_by_date/2023/9
-  app9:
-    build: .
-    env_file:
-      - .env
-    environment:
-      - URL=https://www.goodreads.com/book/popular_by_date/2023/10
-  app10:
-    build: .
-    env_file:
-      - .env
-    environment:
-      - URL=https://www.goodreads.com/book/popular_by_date/2023/11
-  app11:
-    build: .
-    env_file:
-      - .env
-    environment:
-      - URL=https://www.goodreads.com/book/popular_by_date/2023/12
+  # app6:
+  #   build: .
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - URL=https://www.goodreads.com/book/popular_by_date/2023/7
+  # app7:
+  #   build: .
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - URL=https://www.goodreads.com/book/popular_by_date/2023/8
+  # app8:
+  #   build: .
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - URL=https://www.goodreads.com/book/popular_by_date/2023/9
+  # app9:
+  #   build: .
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - URL=https://www.goodreads.com/book/popular_by_date/2023/10
+  # app10:
+  #   build: .
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - URL=https://www.goodreads.com/book/popular_by_date/2023/11
+  # app11:
+  #   build: .
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - URL=https://www.goodreads.com/book/popular_by_date/2023/12
