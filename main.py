@@ -184,13 +184,15 @@ except Exception as e:
 for href in href_list:
     try:
         session = Session()
-        new_book = scrape_book(href)
-        session.add(new_book)
-        session.commit()
-        print("Added new book", new_book)
+        existing_book = session.query(model.Book).filter_by(url=href).first()
+        if existing_book:
+            print(f"Book with URL {href} already exists.")
+        else:
+            session.add(scrape_book(href))
+            session.commit()  # Commit the transaction
     except Exception as e:
-        session.rollback()
-        print("Error connecting to the database:", e)
+        session.rollback()  # Rollback the session on error
+        print(f"Error: {e.orig}")  # Print the original error message
     finally:
         session.close()
 
