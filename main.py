@@ -173,7 +173,6 @@ print(connection_string)
 engine = create_engine(connection_string)
 
 Session = sessionmaker(bind=engine)
-session = Session()
 
 try:
     model.Base.metadata.create_all(engine)
@@ -183,6 +182,7 @@ except Exception as e:
 
 for href in href_list:
     try:
+        session = Session()
         new_book = scrape_book(href)
         session.add(new_book)
         session.commit()
@@ -190,6 +190,7 @@ for href in href_list:
     except Exception as e:
         session.rollback()
         print("Error connecting to the database:", e)
+    finally:
+        session.close()
 
-session.close()
 driver.quit()
