@@ -192,7 +192,7 @@ for href in href_list:
             session.commit()  # Commit the transaction
     except Exception as e:
         session.rollback()  # Rollback the session on error
-        print(f"Error: {e.orig}")  # Print the original error message
+        print(f"Error: {e}")  # Print the original error message
     finally:
         session.close()
 
